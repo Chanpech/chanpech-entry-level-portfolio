@@ -49,7 +49,7 @@ export default function Contact() {
 
           <Button
             type="submit"
-            className="btn btn-primary flex items-center justify-center space-x-2 p-3 bg-gray-800 text-white rounded hover:bg-blue-500"
+            className="btn btn-primary flex items-center justify-center space-x-2 p-3 bg-gray-800 dark:bg-gray-600 text-white rounded hover:bg-blue-500"
           >
             <HiOutlineMail />
             <span>Send Message</span>
