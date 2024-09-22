@@ -83,7 +83,7 @@ export default function WorkExperience() {
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold">{exp.title}</CardTitle>
                   <CardDescription  className="font-medium text-primary">
-                    {exp.company}
+                    <span> {exp.company}</span>
                   </CardDescription>
                   <CardContent>
                     <div className="flex items-center text-sm text-muted-foreground mb-2">
@@ -111,7 +111,7 @@ export default function WorkExperience() {
             </Card>       
           </motion.div>
         ))}
-        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border rounded-full"></div>
+        <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border rounded-full" />
       </div>
     </section>
   );

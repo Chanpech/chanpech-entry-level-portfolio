@@ -50,8 +50,8 @@ export default function Contact() {
                         <CardContent className="p-4">
                             <CardTitle className="text-lg mb-2">{cert.name}</CardTitle>
                             <CardDescription>
-                                <p className="text-sm text-muted-foreground mb-1">Issued by: {cert.issuer}</p>
-                                <p className="text-sm text-muted-foreground">Acquired: {cert.date}</p>
+                                <span className="text-sm text-muted-foreground mb-1">Issued by: {cert.issuer}</span>
+                                <span className="text-sm text-muted-foreground">Acquired: {cert.date}</span>
                             </CardDescription>
                         </CardContent>
                     </Card>
