@@ -1,4 +1,3 @@
-import { GoProject } from "react-icons/go";
 import { FaRegCalendar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import {
