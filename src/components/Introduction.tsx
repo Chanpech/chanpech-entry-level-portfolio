@@ -14,10 +14,12 @@ export default function Introduction() {
         </div>
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-4">Chanpec Hoeng</h2>
-          <h3 className="text-xl text-muted-foreground mb-4">B.S. Computer Science Graduate | Cybersecurity Enthusiast</h3>
+          <h3 className="text-xl text-muted-foreground">B.S. Computer Science Graduate | Cybersecurity Enthusiast</h3>
+          <h4 className="text-l text-muted-foreground mb-4">Departmental GPA: 3.55 | Cumulative GPA: 3.71</h4>
           <p className="text-lg mb-6">
-          Class of 2024 Michigan Technological University graduate with a passion for developing secure and efficient software solutions. 
-          Seeking opportunities to apply my skills in software development and cybersecurity to make a positive impact in the tech industry.
+          I’m a 2024 graduate from Michigan Technological University with a strong passion for developing secure and efficient software solutions. 
+          I'm always eager to learn and stay updated on the latest technologies, as shown through my personal projects. 
+          During my time at Michigan Tech, I connected with like-minded huskies innovators through organizations like NCSA and the HIDE Enterprise, where I worked on exciting and impactful projects.
           </p>
           <div className="flex flex-wrap gap-4">
             <a

@@ -82,7 +82,8 @@ export default function Courses() {
 
   return (
     <section id="courses" className="mb-12">
-      <h2 className="text-3xl font-bold mb-6">Completed Michigan Technological University's Courses</h2>
+      <h2 className="text-3xl font-bold mb-2">Completed Michigan Technological University's Courses</h2>
+      <p className="text-sm font-semibold mb-6 italic  ">* College transcript available upon request</p>
       <div className="space-y-4">
         {courseSections.map((section) => (
           <div key={section.title} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
