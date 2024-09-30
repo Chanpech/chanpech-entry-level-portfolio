@@ -3,7 +3,7 @@ import profilePicture from '../assets/profile.svg'
 
 export default function Introduction() {
   return (
-    <section id="about" className="mb-14">
+    <section id="about" className="container mx-auto px-4 py-8 mb-14">
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-48 h-48 md:w-64 md:h-64 relative overflow-hidden rounded-full border-4 border-primary shadow-lg">
           <img
