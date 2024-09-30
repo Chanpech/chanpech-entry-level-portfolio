@@ -29,14 +29,14 @@ const projects: Project[] = [
     }, 
     {
         id: "2", 
-        title:"Swift Programming | Mood Tracker",
+        title:"Homelab Server | Mac Mini | Raspberry Pi",
         description: "This is my description",
-        image:"/swift_logo.png",
-        link: "https://www.youtube.com/watch?v=8Xg7E9shq0U&ab_channel=freeCodeCamp.org"
+        image:"/home-server.jpg",
+        link: "https://www.youtube.com/watch?v=_qNWpdFqLIU&ab_channel=TechHut"
     }, 
     {
         id: "3", 
-        title:"Embedded Programming with Arduino",
+        title:"Front-End Developer Professional Certificate",
         description: "This is my description",
         image:"/courserameta.jpg",
         link: "https://www.coursera.org/professional-certificates/meta-front-end-developer?"
@@ -81,7 +81,6 @@ export default function CurrentProjects(){
                                     {project.title}
                                 </CardTitle>
                                 <CardDescription>
-                                    {project.description}
                                 </CardDescription>
                             </CardContent>
                             <CardFooter className="p-4">
