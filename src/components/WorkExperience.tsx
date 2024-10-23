@@ -22,7 +22,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: "1",
-    title: "Promoted - Student Mac Support Technician",
+    title: "Student Mac Support Technician",
     company: "Michigan Technological University",
     location: "Townsend Dr, Houghton, MI 49931",
     date: "Sept 2022 - June 2024",
@@ -51,19 +51,6 @@ const experiences: Experience[] = [
     skills:
       "Printer Diagnostics and Repair, Network Connectivitiy Troubleshooting, Equipment Maintenace and Recycling, Customer Service, Calling and Scheduling Customer's Supports, and Salvaging Valuable Parts",
   },
-  // {
-  //   id: "3",
-  //   title: "Production Team Member",
-  //   company: "Gentex",
-  //   location: "James Street Holland, MI 49464",
-  //   date: "May 2022 - Aug 2022",
-  //   description: [
-  //     "Assembled and inspected products to ensure compliance with stringent quality and production standards, contributing to the consistent delivery of high-quality goods.",
-  //     "Collaborated effectively with team members to meet or exceed daily production targets, consistently contributing to an efficient and safe work environment.",
-  //   ],
-  //   skills:
-  //     "Assembly, Quality Assurance, Fast-pace environment, and Manufacturing Process",
-  // },
 ];
 
 export default function WorkExperience() {

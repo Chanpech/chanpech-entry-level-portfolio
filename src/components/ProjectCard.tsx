@@ -2,6 +2,7 @@ import { FaGithub } from "react-icons/fa";
 
 interface ProjectCardProps {
   title: string;
+  type: string;
   role: string;
   description: string;
   technologies: string[];
@@ -10,15 +11,20 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
   title,
-  description,
+  type,
   role,
+  description,
   technologies,
   githubLink,
 }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md pd-6 px-4 py-4">
       <h3 className="text-xl font-semibold mb-1">{title}</h3>
-      <h4 className="text-l font-light mb-2">{role}</h4>
+      <div className="flex item-cols space-x-2 mb-2">
+        <h4 className="text-primary font-semibold font-medium">{type}</h4>
+        <h4 className="text-primary text-muted-foreground">{role}</h4>
+
+      </div>
       <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
       <div className="mb-4">
         {technologies.map((tech, index) => (
