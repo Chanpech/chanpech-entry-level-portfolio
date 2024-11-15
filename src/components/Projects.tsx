@@ -30,7 +30,8 @@ export default function Projects(){
             role:"Co-Leader | Full-Stack Developer",
             description:"As a lead developer on the Cars Comparison App project for General Motors, I designed and developed a web application that enables users to compare various car models. The project utilized a tech stack including React, Vite.js, Django, Selenium, and Beautiful Soup. I managed the backend, implementing a MySQL database containerized with Docker Compose to streamline development and deployment. I also worked on cost-saving solutions using AWS services like Elastic Beanstalk and LightSail for deployment. My role involved full-stack development, automated testing, and integrating data scraping tools, resulting in an efficient and user-friendly application.",
             technologies:["React","Vite.js", "Django", "Python: Beautiful Soup", "Python: Selenium", "Docker", "AWS", "Postgres", "Figma"],
-            githubLink:"https://github.com/MTUHIDE/GM-Automotive-Car-Comparison-App"
+            githubLink:"https://github.com/MTUHIDE/GM-Automotive-Car-Comparison-App",
+            webLink: ""
         },
         {
             title: "Password Manager | Azure Cloud Deployment",
@@ -38,7 +39,8 @@ export default function Projects(){
             role:"Solo Developer",
             description:"Implemented a temporary password manager that was designed on RESTful API principles. Leveraged free-tier Azure Service, Container registry, and App Service Plan to deploy the application to the cloud. Utilized Node.js and implemented server-side password hashing for the backend.",
             technologies:["React","Vite.js", "Azure Cloud Services", "bcrypt", "Figma", "Express.js", "UseState"],
-            githubLink:"https://github.com/Chanpech/password-manager-dockerized-to-azure-cloud"
+            githubLink:"https://github.com/Chanpech/password-manager-dockerized-to-azure-cloud",
+            webLink: ""
         },
         {
             title: "Projects Manager | MERN Stack + GraphQL",
@@ -46,7 +48,8 @@ export default function Projects(){
             role:"Learner",
             description:"Learned and implemented a project manager web application that would help me track all of my projects. Utilized Apollo GraphQL client to build appropriate schema for the client side to execute queries and mutation from the integrated MongoDB database.",
             technologies:["React","Vite.js", "Express-GraphQL ", "MongoDB", "Express", "Docker", "GraphQL-HTTP"],
-            githubLink:"https://github.com/Chanpech/project-management-app"
+            githubLink:"https://github.com/Chanpech/project-management-app",
+            webLink: ""
         },
         {
             title:"Little Brothers - Friends of the Elderly",
@@ -54,7 +57,8 @@ export default function Projects(){
             role:"Full-Stack Developer",
             description:"As a Fullstack Developer for Little Brothers - Friends of the Elderly, I collaborated on building an administration website and mobile tracking application to support the organization's mission of aiding the elderly in Houghton, MI. I designed and implemented a comprehensive backend database, creating ER and UML diagrams to map out key entities and their relationships. I developed and integrated API functions using Laravel, ensuring seamless data interactions. I rigorously tested and validated API functionalities using Postman and Microsoft SQL Server, delivering reliable and accurate service for the non-profit's operations.",
             technologies:["Vue","Trello", "Laravel", "MVC", "GitHub", "Entitiy Relationship Diagram", "Prototype", "MySQL", "Microsoft SQL Server", "Postman", "Laravel-jest - Client Side Testing"],
-            githubLink:"https://github.com/MTUHIDE/little-brothers"
+            githubLink:"https://github.com/MTUHIDE/little-brothers",
+            webLink: ""
         },
     ];
     const [showAll, setShowAll] = useState(false);
