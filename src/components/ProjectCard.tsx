@@ -1,4 +1,5 @@
 import { FaGithub } from "react-icons/fa";
+import { Button } from "./ui/button";
 
 interface ProjectCardProps {
   title: string;
@@ -7,6 +8,7 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   githubLink: string;
+  webLink: string;
 }
 
 export default function ProjectCard({
@@ -16,6 +18,7 @@ export default function ProjectCard({
   description,
   technologies,
   githubLink,
+  webLink,
 }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md pd-6 px-4 py-4">
@@ -23,7 +26,6 @@ export default function ProjectCard({
       <div className="flex item-cols space-x-2 mb-2">
         <h4 className="text-primary font-semibold font-medium">{type}</h4>
         <h4 className="text-primary text-muted-foreground">{role}</h4>
-
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-4">{description}</p>
       <div className="mb-4">
@@ -36,15 +38,42 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-      <a
-        href={githubLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center text-blue-500 hover:text-blue-600 justify-center space-x-1"
-      >
-        <FaGithub />
-        <span>View On GitHub</span>
-      </a>
+      <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 justify-center">
+        <Button
+          variant="outline"
+          size="sm"
+          className="w-full sm:w-auto"
+          asChild
+        >
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-blue-500 hover:text-blue-600 justify-center space-x-1"
+          >
+            <FaGithub />
+            <span>View On GitHub</span>
+          </a>
+        </Button>
+        {webLink && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full sm:w-auto"
+            asChild
+          >
+            <a
+              href={webLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-500 hover:text-blue-600 justify-center space-x-1"
+            >
+              <FaGithub />
+              <span>View Website</span>
+            </a>
+          </Button>
+        )}
+      </div>
     </div>
   );
 }

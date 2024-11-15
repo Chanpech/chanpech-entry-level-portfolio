@@ -7,6 +7,24 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Projects(){
     const projects = [
         {
+            title: "Jayden Brian Bakery Website [Maintain]",
+            type: "Volunteer Project",
+            role:"Solo Developer",
+            description:"Volunteered to create a website for a family’s local bakery business with a focus on attracting more clients. Employed React, Next.js, Tailwind CSS to develop a responsive website.",
+            technologies:["React","Next.js", "Shadcn.UI", "MongoDB", "Canva", "Figma", "Motion Framer"],
+            githubLink:"https://github.com/Chanpech/bakery-website-dev-public-version",
+            webLink:"https://jaydenbrianbakery.vercel.app/"
+        }, 
+        {
+            title: "AirBnb Clone [Working on new features]",
+            type: "Tutorial Project",
+            role:"Learner",
+            description:"Learned and implemented a project manager web application that would help me track all of my projects. Utilized Apollo GraphQL client to build appropriate schema for the client side to execute queries and mutation from the integrated MongoDB database.",
+            technologies:["React","Next.js", "MongoDB", "TailWind", "PrismaDB", "NextAuth Login - GitHub & Google", "Vercel", "TypeScript",],
+            githubLink:"https://github.com/Chanpech/Home-Booking-App",
+            webLink: "https://my-home-booking-clone-app.vercel.app/"
+        },
+        {
             title: "General Motors - Cars Comparison App",
             type: "Human Interface Design Enterprise",
             role:"Co-Leader | Full-Stack Developer",
@@ -23,14 +41,6 @@ export default function Projects(){
             githubLink:"https://github.com/Chanpech/password-manager-dockerized-to-azure-cloud"
         },
         {
-            title: "[In-Progress] Jayden Brian Bakery Website",
-            type: "Volunteer Project",
-            role:"Solo Developer",
-            description:"Volunteered to create a website for a family’s local bakery business with a focus on attracting more clients. Employed React, Next.js, Tailwind CSS to develop a responsive website.",
-            technologies:["React","Next.js", "Shadcn.UI", "MongoDB", "Canva", "Figma", "Motion Framer"],
-            githubLink:"https://github.com/Chanpech/bakery-website-dev-public-version"
-        },
-        {
             title: "Projects Manager | MERN Stack + GraphQL",
             type: "Tutorial Project",
             role:"Learner",
@@ -39,28 +49,12 @@ export default function Projects(){
             githubLink:"https://github.com/Chanpech/project-management-app"
         },
         {
-            title: "AirBnb Clone",
-            type: "Tutorial Project",
-            role:"Learner",
-            description:"Learned and implemented a project manager web application that would help me track all of my projects. Utilized Apollo GraphQL client to build appropriate schema for the client side to execute queries and mutation from the integrated MongoDB database.",
-            technologies:["React","Next.js", "MongoDB", "TailWind", "PrismaDB", "NextAuth Login - GitHub & Google", "Vercel", "TypeScript",],
-            githubLink:"https://github.com/Chanpech/Home-Booking-App"
-        },
-        {
             title:"Little Brothers - Friends of the Elderly",
             type: "Human Interface Design Enterprise",
             role:"Full-Stack Developer",
             description:"As a Fullstack Developer for Little Brothers - Friends of the Elderly, I collaborated on building an administration website and mobile tracking application to support the organization's mission of aiding the elderly in Houghton, MI. I designed and implemented a comprehensive backend database, creating ER and UML diagrams to map out key entities and their relationships. I developed and integrated API functions using Laravel, ensuring seamless data interactions. I rigorously tested and validated API functionalities using Postman and Microsoft SQL Server, delivering reliable and accurate service for the non-profit's operations.",
             technologies:["Vue","Trello", "Laravel", "MVC", "GitHub", "Entitiy Relationship Diagram", "Prototype", "MySQL", "Microsoft SQL Server", "Postman", "Laravel-jest - Client Side Testing"],
             githubLink:"https://github.com/MTUHIDE/little-brothers"
-        },
-        {
-            title:"Habit Builder App",
-            type: "Course Work Project: CS3141",
-            role:"Front-end Developer",
-            description:"As an entry-level developer gaining experience with Agile SCRUM methodology and the associated development processes, my primary objective for this project was to familiarize myself with web development within a team environment, closely mirroring professional practices. By the end of the course, our team successfully presented a user-friendly application that operated locally and encompassed essential features for a habit-building app. These features included creating and managing habit cards, logging habits, deleting habit cards, and viewing user profiles.",
-            technologies:["React","ER Diagram", "Agile-SCRUM", "GitHub", "Prisma", "Material UI", "UI/UX"],
-            githubLink:"https://github.com/MTU-CS3141-Team15/CS3141-R02-team15"
         },
     ];
     const [showAll, setShowAll] = useState(false);
