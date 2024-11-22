@@ -19,7 +19,7 @@ export default function Projects(){
             title: "AirBnb Clone [Working on new features]",
             type: "Tutorial Project",
             role:"Learner",
-            description:"Learned and implemented a project manager web application that would help me track all of my projects. Utilized Apollo GraphQL client to build appropriate schema for the client side to execute queries and mutation from the integrated MongoDB database.",
+            description:"Learned and implemented a home booking web application with the aimed of understanding the basics fundmental between frontend, backend, and server side development. The application is built on MERN stack and is currently running on Vercel.",
             technologies:["React","Next.js", "MongoDB", "TailWind", "PrismaDB", "NextAuth Login - GitHub & Google", "Vercel", "TypeScript",],
             githubLink:"https://github.com/Chanpech/Home-Booking-App",
             webLink: "https://my-home-booking-clone-app.vercel.app/"
