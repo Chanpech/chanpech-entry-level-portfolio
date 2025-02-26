@@ -68,12 +68,14 @@ function CertificateCard({ cert }: { cert: Certificate }) {
           <CardContent className="p-6" style={{ color: textColor }}>
             <CardTitle className="text-xl mb-2">{cert.name}</CardTitle>
             <CardDescription className="space-y-2" style={{ color: textColor }}>
-              <p className="text-sm font-medium">
+              <span className="text-sm font-medium">
                 Issued by: {cert.issuer}
-              </p>
-              <p className="text-sm font-medium">
+              </span>
+            </CardDescription>
+            <CardDescription className="space-y-2" style={{ color: textColor }}>
+              <span className="text-sm font-medium">
                 Acquired: {cert.date}
-              </p>
+              </span>
             </CardDescription>
           </CardContent>
         </Card>
