@@ -10,6 +10,7 @@ import {
     CardHeader,
     CardTitle
  } from "./ui/card";
+import { Link } from "react-router-dom";
 
 interface Project { 
     id: string
@@ -17,6 +18,7 @@ interface Project {
     description: string
     image: string
     link: string
+    isInternal?: Boolean
 }
 
 const projects: Project[] = [
@@ -25,21 +27,24 @@ const projects: Project[] = [
         title:"CompTia Security+ Certification",
         description: "This is my description",
         image:"/CompTIA_Security_Logo.png",
-        link: "https://www.udemy.com/course/securityplus/?couponCode=JUST4U02223"
+        link: "https://www.udemy.com/course/securityplus/?couponCode=JUST4U02223",
+        isInternal: false
     }, 
     {
         id: "2", 
         title:"Homelab Server | Mac Mini | Raspberry Pi",
         description: "This is my description",
-        image:"/home-server.jpg",
-        link: "https://www.youtube.com/watch?v=_qNWpdFqLIU&ab_channel=TechHut"
+        image:"/home-server.jpg",  
+        link: "/homelabserver", // internal route
+        isInternal: true
     }, 
     {
         id: "3", 
         title:"Front-End Developer Professional Certificate",
         description: "This is my description",
         image:"/courserameta.jpg",
-        link: "https://www.coursera.org/professional-certificates/meta-front-end-developer?"
+        link: "https://www.coursera.org/professional-certificates/meta-front-end-developer?",
+        isInternal: false
     }, 
 ]
 
@@ -68,10 +73,17 @@ export default function CurrentProjects(){
                                     />
                                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                                         <Button  variant="secondary" asChild > 
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                            {project.isInternal?(
+                                                <Link to={project.link} className="flex items-center">
+                                                    View Task
+                                                    <FaExternalLinkAlt className="ml-2 h-4 w-4"/>
+                                                </Link>
+                                            ):(
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
                                                 View Task 
                                                 <FaExternalLinkAlt className="ml-2 h-4 w-4"/>
-                                            </a>
+                                                </a>
+                                            )}
                                         </Button>
                                     </div>
                                 </div>
