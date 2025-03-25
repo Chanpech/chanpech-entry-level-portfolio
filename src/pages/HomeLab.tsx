@@ -37,7 +37,7 @@ export default function HomeLabPage() {
           <HardwareCard 
             title="Raspberry Pi 3"
             role="Network Services"
-            specs={["8GB RAM", "Pi-hole", "Traffic Gateway"]}
+            specs={["Raspbian", "Pi-hole", "Traffic Gateway"]}
             image={raspberry}
           />
         </div>
