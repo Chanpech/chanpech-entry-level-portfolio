@@ -46,6 +46,7 @@ export default function Contact() {
 
   return (
     <section id="contact">
+      
       <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <form

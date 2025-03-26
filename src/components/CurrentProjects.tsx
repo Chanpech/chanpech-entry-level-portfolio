@@ -25,25 +25,25 @@ const projects: Project[] = [
     {
         id: "1", 
         title:"CompTia Security+ Certification",
-        description: "This is my description",
+        description: "Prep to get certified through DionTraining Udemy course. Plan to take exam by the end of April!",
         image:"/CompTIA_Security_Logo.png",
         link: "https://www.udemy.com/course/securityplus/?couponCode=JUST4U02223",
         isInternal: false
     }, 
     {
         id: "2", 
-        title:"Homelab Server | Mac Mini | Raspberry Pi",
-        description: "This is my description",
+        title:"Homelab Server",
+        description: "Powered by a Mac Mini and a Raspberry Pi, my home server is capible of centralized NAS service, Pihole, and more. Want to know more? Check out this dedicated page!",
         image:"/home-server.jpg",  
         link: "/homelabserver", // internal route
         isInternal: true
     }, 
     {
         id: "3", 
-        title:"Front-End Developer Professional Certificate",
-        description: "This is my description",
-        image:"/courserameta.jpg",
-        link: "https://www.coursera.org/professional-certificates/meta-front-end-developer?",
+        title:"Ollama",
+        description: "Learn to locally host LLM models and integrates web APIs",
+        image:"/ollama.webp",
+        link: "https://github.com/ollama/ollama",
         isInternal: false
     }, 
 ]
@@ -93,6 +93,7 @@ export default function CurrentProjects(){
                                     {project.title}
                                 </CardTitle>
                                 <CardDescription>
+                                    {project.description}
                                 </CardDescription>
                             </CardContent>
                             <CardFooter className="p-4">
