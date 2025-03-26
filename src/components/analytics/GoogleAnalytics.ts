@@ -1,38 +1,39 @@
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 const GoogleAnalytics = () => {
-    const gaId = import.meta.env.VITE_GA_ID;    // Read the ID from the environment variable
+  const gaId = import.meta.env.VITE_GA_ID;
 
-    if(!gaId){
-        console.error("Missing Google Analytics ID. Please check the .env file.");
-        return ;
-    }
+  useEffect(() => {
+    if (!gaId || typeof window === "undefined") return;
 
-    useEffect(()=> {
-        //Add the Google Ananlytics script to the document
-        const script = document.createElement("script");
-        script.src =  `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-        script.async = true;
-        document.head.appendChild(script);
-
-        // Initialize the dataLayer and gtag function
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-        }
-        window.gtag = gtag;
-
-        // Configure Google Analytics
-        gtag("js", new Date());
-        gtag("config", gaId);
-
-        // Cleanup function to remove the script when the component unmounts
-        return () => {
-            document.head.removeChild(script);
-        };
-    },[]);
+    // Load script
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    script.async = true;
     
+    // Initialize dataLayer and gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    window.gtag = gtag;
+    
+    gtag("js", new Date());
+    gtag("config", gaId, {
+      send_page_view: false // Optional: handle page views manually
+    });
+
+    document.head.appendChild(script);
+
+    // No cleanup needed - we want this to persist
+  }, [gaId]);
+
+  if (!gaId) {
+    console.error("Missing Google Analytics ID. Please check the .env file.");
     return null;
+  }
+
+  return null;
 };
 
 export default GoogleAnalytics;

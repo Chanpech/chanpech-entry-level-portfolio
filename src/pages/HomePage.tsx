@@ -8,15 +8,15 @@ import Certification from "../components/Certification";
 import CurrentProjects from '../components/CurrentProjects';
 import WelcomeIntroContainer from '../components/WelcomeIntroContainer';
 import References from '../components/References';
-import GoogleAnalytics from '../components/analytics/GoogleAnalytics.js';
+import { WhatsNew } from '@/components/WhatsNew';
 
 const HomePage = () => {
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-          <GoogleAnalytics />
           <Header />
           <WelcomeIntroContainer />
           <main className='container mx-auto px-4 py-8'>
+            <WhatsNew />
             <WorkExperience />
             <Projects />
             <Courses />
