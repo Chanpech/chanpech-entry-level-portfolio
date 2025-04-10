@@ -7,6 +7,7 @@ import surfacepro from '../assets/surface-pro.webp';
 import { Button } from "@/components/ui/button";
 import { BiArrowBack } from "react-icons/bi";
 import { useState } from "react";
+
 const buildJourney = [
     {
         title: "The Research",
@@ -97,9 +98,21 @@ const buildJourney = [
 const documentationResources = [
     {
         title: "Blissify OS",
-        url: "https://casaos.zimaspace.com/",
+        url: "https://blissos.org/index.html#download",
         category: "Andriod OS",
-        note: "Recommended for this build, but be aware that I couldn't get the device to go to sleep."
+        note: "Recommended for this build, but be aware that the device may unable to go to sleep."
+    },
+    {
+        title: "Andriodx84",
+        url: "https://www.android-x86.org/download",
+        category: "Andriod OS",
+        note: "OS Option #2 "
+    },
+    {
+        title: "Andriodx84",
+        url: "https://chromeos.google/products/chromeos-flex/#osflex-signup",
+        category: "Chrome OS",
+        note: "OS Option #3 with end of support in 2026 "
     },
     {
         title: "Stylus Pen - Support pressure sensitivity",
@@ -132,12 +145,6 @@ const documentationAnimation = {
     viewport: { once: true }
 };
 
-// Animation for individual documentation items
-const documentItemAnimation = {
-    initial: { opacity: 0, x: -10 },
-    whileInView: { opacity: 1, x: 0 },
-    transition: { duration: 0.3 }
-};
 
 const SurfaceAndroid = () => {
     const [isHovering, setIsHovering] = useState(false)
