@@ -5,6 +5,7 @@ import LoadingSpinner from "./components/LoadingSpinner.tsx"
 
 // Lazy load pages with explicit naming for better debugging
 const HomeLabPage = lazy(() => import('./pages/HomeLab.tsx'));
+const SurfaceAndroidPage = lazy(() => import('./pages/SurfaceAndriod.tsx'));
 
 function App() {
   return (
@@ -18,7 +19,15 @@ function App() {
               <HomeLabPage />
             </Suspense>
           }
-        />
+        /> 
+        <Route
+        path="/surfacetablet"
+        element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <SurfaceAndroidPage />
+          </Suspense>
+        }
+      />
       </Routes>
     </Router>
   );

@@ -11,6 +11,14 @@ const updates = [
     date: "March 2025",
     link: "/homelabserver",
     icon: <FaServer className="text-blue-500" />
+  },
+  {
+    id: 2,
+    title: "Andriod Project Page",
+    description: "Check out how I turn an old surface pro 3 to an andriod ran device",
+    date: "March 2025",
+    link: "/surfacetablet",
+    icon: <FaServer className="text-blue-500" />
   }
   // Add more updates as needed
 ];
