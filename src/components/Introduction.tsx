@@ -8,12 +8,13 @@ export default function Introduction() {
         <div className="w-48 h-48 md:w-64 md:h-64 relative overflow-hidden rounded-full border-4 border-primary shadow-lg">
           <img
             src={profilePicture} 
-            alt="Chanpech Hoeng"
+            alt="Damian Nul"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
           />
         </div>
         <div className="flex-1">
-          <h2 className="text-3xl font-bold mb-4">Chanpec Hoeng</h2>
+          <h2 className="text-3xl font-bold ">Damian Nul</h2>
+          <h2 className="text-2xl text-muted-foreground mb-4">Formerly known: Chanpech Hoeng</h2>
           <h3 className="text-xl text-muted-foreground">B.S. Computer Science Graduate | Cybersecurity Enthusiast</h3>
           <h4 className="text-l text-muted-foreground mb-4">Departmental GPA: 3.55 | Cumulative GPA: 3.71</h4>
           <p className="text-lg mb-6">

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const messages = [
-    "Hello, I'm Chanpech",
+    "Hello, I'm Peck",
     "I'm a full-stack developer!",
     "Actively seeking to understand and master new frameworks!"
 ]
