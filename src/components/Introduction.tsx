@@ -20,7 +20,9 @@ export default function Introduction() {
           <h3 className="text-xl text-muted-foreground">B.S. Computer Science Graduate | Cybersecurity Enthusiast</h3>
           <h4 className="text-l text-muted-foreground mb-4">Departmental GPA: 3.55 | Cumulative GPA: 3.71</h4>
           <p className="text-lg mb-6">
-            Actively seeking I.T. and developer opportunity! I am able to relocate, pick up new skills, and put in the work! Open to freelance work, contract, and full-time position. If I peeked your interests please shoot me a message and I'm happy to chat 💬! 
+          Actively seeking opportunities in IT and software development! I'm open to freelance, contract, or full-time roles—and ready to relocate if needed. I’m a fast learner, dedicated, and always up for a challenge.
+
+If I’ve piqued your interest, feel free to reach out—I'd love to chat! 💬
           </p>
           <div className="flex flex-wrap gap-4">
             <a
