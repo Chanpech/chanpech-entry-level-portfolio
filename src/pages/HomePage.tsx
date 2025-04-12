@@ -9,6 +9,7 @@ import CurrentProjects from '../components/CurrentProjects';
 import WelcomeIntroContainer from '../components/WelcomeIntroContainer';
 import References from '../components/References';
 import { WhatsNew } from '@/components/WhatsNew';
+import BuyMeCoffee from '@/components/BuyMeCoffee';
 
 const HomePage = () => {
     return (
@@ -24,6 +25,7 @@ const HomePage = () => {
             <CurrentProjects />
             <References />
             <Contact />
+            <BuyMeCoffee />
           </main>
           <Footer />
         </div>
