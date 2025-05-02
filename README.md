@@ -26,7 +26,7 @@ Welcome to my portfolio website! This project showcases my skills, experience, b
 
 | Desktop | Mobile |
 |--------|--------|
-| ![Desktop](./screenshots/desktopmode.png) | ![Mobile](./screenshots/desktopmode.png) |
+| ![Desktop](./screenshots/desktop-mode.png) | ![Mobile](./screenshots/mobile-mode.png) |
 
 ## 🚀 Getting Started
 
