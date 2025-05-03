@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { GtagFunction } from "@/types/gtag";
 
 const GoogleAnalytics = () => {
   const gaId = import.meta.env.VITE_GA_ID;
@@ -13,7 +14,7 @@ const GoogleAnalytics = () => {
     
     // Initialize dataLayer and gtag
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
+    const gtag: GtagFunction = function (...args){
       window.dataLayer.push(args);
     }
     window.gtag = gtag;

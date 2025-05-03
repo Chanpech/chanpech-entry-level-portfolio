@@ -18,7 +18,7 @@ interface Project {
     description: string
     image: string
     link: string
-    isInternal?: Boolean
+    isInternal?: boolean
 }
 
 const projects: Project[] = [
