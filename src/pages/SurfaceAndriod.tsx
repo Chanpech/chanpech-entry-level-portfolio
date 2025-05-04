@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BlogPost } from "@/components/BlogPost";
 import { motion } from "framer-motion";
 import ServiceBadge from "@/components/ServiceBadge";
-import HardwareCardV2 from "@/components/HardwareCardV2";
+import HardwareCardV2 from "@/components/cards/HardwareCardV2";
 import surfacepro from '../assets/surface-pro.webp';
 import { Button } from "@/components/ui/button";
 import { BiArrowBack } from "react-icons/bi";

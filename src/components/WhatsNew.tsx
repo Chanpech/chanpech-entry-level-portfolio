@@ -6,6 +6,14 @@ import { FaArrowRight, FaServer } from "react-icons/fa";
 const updates = [
   {
     id: 1,
+    title: "Jayden Brian Bakery",
+    description: "New blog on the start to finish of journey to building a web app for a small business!",
+    date: "May 2025",
+    link: "/jaydenbrianbakery",
+    icon: <FaServer className="text-blue-500" />
+  },
+  {
+    id: 2,
     title: "New Homelab Project Page",
     description: "Check out my self-hosted server setup with Mac Mini and Raspberry Pi",
     date: "March 2025",
@@ -13,7 +21,7 @@ const updates = [
     icon: <FaServer className="text-blue-500" />
   },
   {
-    id: 2,
+    id: 3,
     title: "Andriod Project Page",
     description: "Check out how I turn an old surface pro 3 to an andriod ran device",
     date: "March 2025",

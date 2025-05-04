@@ -1,6 +1,6 @@
 // HomeLabPage.tsx
 import { motion } from "framer-motion";
-import HardwareCard from "../components/HardwareCard";
+import HardwareCard from "../components/cards/HardwareCard";
 import ServiceBadge from "../components/ServiceBadge";
 import raspberry from '../assets/raspberry-pi.webp'
 import macmini from '../assets/mac-mini.webp'
