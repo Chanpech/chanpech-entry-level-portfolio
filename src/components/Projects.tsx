@@ -12,8 +12,8 @@ export default function Projects(){
             role:"Solo Developer",
             description:"Volunteered to create a website for a family’s local bakery business with a focus on attracting more clients. Employed React, Next.js, Tailwind CSS to develop a responsive website.",
             technologies:["React","Next.js", "Shadcn.UI", "MongoDB", "Canva", "Figma", "Motion Framer"],
-            githubLink:"https://github.com/Chanpech/bakery-website-dev-public-version",
-            webLink:"https://jaydenbrianbakery.vercel.app/"
+            webLink:"https://jaydenbrianbakery.vercel.app/",
+            article:"https://www.damiannul.me/jaydenbrianbakery",
         }, 
         {
             title: "AirBnb Clone [Working on new features]",
@@ -22,7 +22,7 @@ export default function Projects(){
             description:"Learned and implemented a home booking web application with the aimed of understanding the basics fundmental between frontend, backend, and server side development. The application is built on MERN stack and is currently running on Vercel.",
             technologies:["React","Next.js", "MongoDB", "TailWind", "PrismaDB", "NextAuth Login - GitHub & Google", "Vercel", "TypeScript",],
             githubLink:"https://github.com/Chanpech/Home-Booking-App",
-            webLink: "https://my-home-booking-clone-app.vercel.app/"
+            webLink: "https://my-home-booking-clone-app.vercel.app/",
         },
         {
             title: "General Motors - Cars Comparison App",
@@ -31,7 +31,6 @@ export default function Projects(){
             description:"As a lead developer on the Cars Comparison App project for General Motors, I designed and developed a web application that enables users to compare various car models. The project utilized a tech stack including React, Vite.js, Django, Selenium, and Beautiful Soup. I managed the backend, implementing a MySQL database containerized with Docker Compose to streamline development and deployment. I also worked on cost-saving solutions using AWS services like Elastic Beanstalk and LightSail for deployment. My role involved full-stack development, automated testing, and integrating data scraping tools, resulting in an efficient and user-friendly application.",
             technologies:["React","Vite.js", "Django", "Python: Beautiful Soup", "Python: Selenium", "Docker", "AWS", "Postgres", "Figma"],
             githubLink:"https://github.com/MTUHIDE/GM-Automotive-Car-Comparison-App",
-            webLink: ""
         },
         {
             title: "Password Manager | Azure Cloud Deployment",
@@ -40,7 +39,6 @@ export default function Projects(){
             description:"Implemented a temporary password manager that was designed on RESTful API principles. Leveraged free-tier Azure Service, Container registry, and App Service Plan to deploy the application to the cloud. Utilized Node.js and implemented server-side password hashing for the backend.",
             technologies:["React","Vite.js", "Azure Cloud Services", "bcrypt", "Figma", "Express.js", "UseState"],
             githubLink:"https://github.com/Chanpech/password-manager-dockerized-to-azure-cloud",
-            webLink: ""
         },
         {
             title: "Projects Manager | MERN Stack + GraphQL",
@@ -49,7 +47,6 @@ export default function Projects(){
             description:"Learned and implemented a project manager web application that would help me track all of my projects. Utilized Apollo GraphQL client to build appropriate schema for the client side to execute queries and mutation from the integrated MongoDB database.",
             technologies:["React","Vite.js", "Express-GraphQL ", "MongoDB", "Express", "Docker", "GraphQL-HTTP"],
             githubLink:"https://github.com/Chanpech/project-management-app",
-            webLink: ""
         },
         {
             title:"Little Brothers - Friends of the Elderly",
@@ -58,7 +55,6 @@ export default function Projects(){
             description:"As a Fullstack Developer for Little Brothers - Friends of the Elderly, I collaborated on building an administration website and mobile tracking application to support the organization's mission of aiding the elderly in Houghton, MI. I designed and implemented a comprehensive backend database, creating ER and UML diagrams to map out key entities and their relationships. I developed and integrated API functions using Laravel, ensuring seamless data interactions. I rigorously tested and validated API functionalities using Postman and Microsoft SQL Server, delivering reliable and accurate service for the non-profit's operations.",
             technologies:["Vue","Trello", "Laravel", "MVC", "GitHub", "Entitiy Relationship Diagram", "Prototype", "MySQL", "Microsoft SQL Server", "Postman", "Laravel-jest - Client Side Testing"],
             githubLink:"https://github.com/MTUHIDE/little-brothers",
-            webLink: ""
         },
     ];
     const [showAll, setShowAll] = useState(false);
@@ -66,7 +62,7 @@ export default function Projects(){
 
     return (
         <section id="projects" className="mb-14">
-            <h2 className="text-3xl font-bold mb-4">Projects</h2>
+            <h2 className="text-3xl font-bold mb-4">Software Engineering Projects</h2>
             <motion.div 
                 className="grid grid-cols-1 md:grind-cols-2 lg:grind-cols-3 gap-6"
                 initial={false}

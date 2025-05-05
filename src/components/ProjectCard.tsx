@@ -1,4 +1,6 @@
 import { FaGithub } from "react-icons/fa";
+import { GrArticle } from "react-icons/gr";
+import { FaSquareShareNodes } from "react-icons/fa6";
 import { Button } from "./ui/button";
 
 interface ProjectCardProps {
@@ -7,8 +9,9 @@ interface ProjectCardProps {
   role: string;
   description: string;
   technologies: string[];
-  githubLink: string;
-  webLink: string;
+  githubLink?: string | null;
+  webLink?: string | null;
+  article?: string | null;
 }
 
 export default function ProjectCard({
@@ -19,6 +22,7 @@ export default function ProjectCard({
   technologies,
   githubLink,
   webLink,
+  article,
 }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md pd-6 px-4 py-4">
@@ -39,7 +43,8 @@ export default function ProjectCard({
         ))}
       </div>
       <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 justify-center">
-        <Button
+        {githubLink && (
+          <Button
           variant="outline"
           size="sm"
           className="w-full sm:w-auto"
@@ -55,6 +60,7 @@ export default function ProjectCard({
             <span>View On GitHub</span>
           </a>
         </Button>
+        )}
         {webLink && (
           <Button
             variant="outline"
@@ -68,8 +74,26 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="flex items-center text-blue-500 hover:text-blue-600 justify-center space-x-1"
             >
-              <FaGithub />
+              <FaSquareShareNodes />
               <span>View Website</span>
+            </a>
+          </Button>
+        )}
+        {article && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full sm:w-auto"
+            asChild
+          >
+            <a
+              href={article}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-500 hover:text-blue-600 justify-center space-x-1"
+            >
+              <GrArticle />
+              <span>Read the blog</span>
             </a>
           </Button>
         )}
