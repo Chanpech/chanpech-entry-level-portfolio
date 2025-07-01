@@ -1,52 +1,76 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { useState, useRef, FormEvent } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/use-toast";
+import ReCAPTCHA from "react-google-recaptcha";
+
+
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_EMAILJS_RECAPTCHA_KEY;
+const FORM_USER_ID = import.meta.env.VITE_EMAILJS_USER_ID;
+const FORM_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const FORM_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const token = await recaptchaRef.current?.executeAsync();
+    if (!token) {
+      toast({
+        title: "Verification failed",
+        description: "Please complete the reCAPTCHA.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    if (form.current) {
-      try {
-        const result = await emailjs.sendForm(
-          "service_srodnrc",
-          "template_caa9zne",
-          form.current,
-          "G2TXYAMiCovHq7uQC"
-        );
+    // Inject the token into a hidden input
+    const tokenInput = document.createElement("input");
+    tokenInput.type = "hidden";
+    tokenInput.name = "g-recaptcha-response";
+    tokenInput.value = token;
+    form.current?.appendChild(tokenInput);
 
-        if (result.text === "OK") {
-          toast({
-            title: "Message sent!",
-            description: "Thank you for your message. I'll get back to you soon.",
-          });
-          form.current.reset();
-        } else {
-          throw new Error("Failed to send message");
-        }
-      } catch (error) {
-        console.error("Error sending email:", error);
-        toast({
-          title: "Error",
-          description: "Failed to send message. Please try again later.",
-          variant: "destructive",
-        });
-      } finally {
-        setIsSubmitting(false);
+    try {
+      const result = await emailjs.sendForm(
+        FORM_SERVICE_ID!,
+        FORM_TEMPLATE!,
+        form.current!,
+        FORM_USER_ID
+      );
+
+      if (result.text === "OK") {
+        toast({ title: "Message sent!", description: "I'll get back to you soon." });
+        form.current?.reset();
+        recaptchaRef.current?.reset();
+      } else {
+        throw new Error("Failed to send message");
       }
+    } catch (error) {
+      console.error("Email send error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <section id="contact">
-      
+
       <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <form
@@ -75,6 +99,12 @@ export default function Contact() {
             placeholder="Your Message"
             required
           ></textarea>
+
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={RECAPTCHA_SITE_KEY || ""}
+            size="invisible"
+          />
 
           <Button
             type="submit"
