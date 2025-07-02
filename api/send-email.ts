@@ -47,10 +47,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         },
       }
     );
-
+    
     return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error: any) {
     console.error('EmailJS send error:', error.response?.data || error.message);
+    console.error('Error public key', error.data.user_id);
+    console.error('Error service id', error.data.service_id);
+    console.error('Error template id', error.data.template_id);
+    
     return res.status(500).json({
       error: 'Failed to send email',
       details: error.response?.data || error.message,
