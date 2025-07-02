@@ -29,9 +29,10 @@ export default function Contact() {
         description: "Please complete the reCAPTCHA.",
         variant: "destructive",
       });
+      recaptchaRef.current?.reset();
       return;
     }
-
+    console.log("Site token: ", token);
     setIsSubmitting(true);
 
     // Inject the token into a hidden input
@@ -64,6 +65,7 @@ export default function Contact() {
         variant: "destructive",
       });
     } finally {
+      recaptchaRef.current?.reset();
       setIsSubmitting(false);
     }
   };
