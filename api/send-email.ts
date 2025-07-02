@@ -6,9 +6,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const { token, user_name, user_email, message } = req.body;
+  // 🔧 Properly parse the body first
+  const rawBody = await new Promise<string>((resolve, reject) => {
+    let data = "";
+    req.on("data", chunk => (data += chunk));
+    req.on("end", () => resolve(data));
+    req.on("error", reject);
+  });
 
-  // 1. Verify reCAPTCHA token with Google
+  let body;
+  try {
+    body = JSON.parse(rawBody);
+  } catch (err) {
+    return res.status(400).json({ error: 'Invalid JSON payload' });
+  }
+
+  const { token, user_name, user_email, message } = body;
+
+  // 🛡️ Verify reCAPTCHA
   try {
     const verifyResponse = await axios.post(
       'https://www.google.com/recaptcha/api/siteverify',
@@ -21,20 +36,29 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const recaptchaData = verifyResponse.data;
 
     if (!recaptchaData.success) {
-      return res.status(400).json({ error: 'reCAPTCHA verification failed', details: recaptchaData['error-codes'] });
+      return res.status(400).json({
+        error: 'reCAPTCHA verification failed',
+        details: recaptchaData['error-codes'],
+      });
     }
   } catch (err) {
-    return res.status(500).json({ error: 'Error verifying reCAPTCHA', details: err });
+    return res.status(500).json({
+      error: 'Error verifying reCAPTCHA',
+      details: err instanceof Error ? err.message : err,
+    });
   }
 
-  // 2. Send email using EmailJS REST API
+  console.log("BODY:", body);
+  console.log("SECRET:", process.env.RECAPTCHA_SECRET_KEY?.slice(0, 6));
+
+  // ✉️ Send email
   try {
-    const emailResponse = await axios.post(
+    await axios.post(
       'https://api.emailjs.com/api/v1.0/email/send',
       {
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
-        user_id: process.env.EMAILJS_PRIVATE_KEY, // This is your public key in EmailJS dashboard
+        user_id: process.env.EMAILJS_PRIVATE_KEY,
         template_params: {
           user_name,
           user_email,
@@ -42,19 +66,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         },
       },
       {
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
       }
     );
-    
+
     return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error: any) {
     console.error('EmailJS send error:', error.response?.data || error.message);
-    console.error('Error public key', error.data.user_id);
-    console.error('Error service id', error.data.service_id);
-    console.error('Error template id', error.data.template_id);
-    
     return res.status(500).json({
       error: 'Failed to send email',
       details: error.response?.data || error.message,

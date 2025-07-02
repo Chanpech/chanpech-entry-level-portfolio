@@ -52,9 +52,10 @@ export default function Contact() {
       }
     } catch (err: any) {
       console.error("Email send error:", err);
+       const message = err?.response?.data?.error || err.message || "Unknown error";
       toast({
         title: "Error",
-        description: err.response?.data?.error || "Something went wrong.",
+        description: message,
         variant: "destructive",
       });
     } finally {
