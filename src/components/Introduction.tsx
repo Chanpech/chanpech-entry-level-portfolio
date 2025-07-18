@@ -38,7 +38,7 @@ If I’ve piqued your interest, feel free to reach out—I'd love to chat! 💬
               <span>GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/chanpech-hoeng-2b7a351b5/"
+              href="https://www.linkedin.com/in/damian-nul-2b7a351b5/"
               target="_blank" //Open in a new tab
               rel="noopener noreferrer" // Adds security enhancement - tabnabbing
               className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-500 flex items-center space-x-2"
