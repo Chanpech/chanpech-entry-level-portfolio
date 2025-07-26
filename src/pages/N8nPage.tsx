@@ -80,7 +80,7 @@ const hardwareStack = [
     {
         title: "Main Server",
         description: "Primary workstation running the N8n automation stack",
-        specs: ["AMD Ryzen 5 3600", "16GB DDR4 RAM (3200 MHz)", "1TB NVMe SSD", "6GB NVIDIA Gefore GTX 1660 Super"],
+        specs: ["AMD Ryzen 5 3600", "16GB DDR4 RAM (3200 MHz)", "1TB NVMe SSD", "6GB NVIDIA GeForce  GTX 1660 Super"],
         icon: "🖥️",
     },
 ];

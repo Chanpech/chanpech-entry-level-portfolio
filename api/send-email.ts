@@ -50,9 +50,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 
-  console.log("BODY:", body);
-  console.log("SECRET:", process.env.RECAPTCHA_SECRET_KEY?.slice(0, 6));
-
+  if (process.env.NODE_ENV === 'development') {
+    console.log("BODY:", body);
+  }
+  
   // ✉️ Send email
   try {
     await axios.post(

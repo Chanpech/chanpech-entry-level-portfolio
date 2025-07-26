@@ -15,7 +15,7 @@ const DocumentationLink = ( { icon, title, description, url } :DocumentationLink
         <motion.a
             href={url}
             target="_blank"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
             initial={{}}
             whileInView={{}}
             viewport={{}}
