@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
 import { FaSquareUpwork } from "react-icons/fa6";
 import FlippingImage from "./FlipImage";
-import frontPic from "../assets/profile.svg"
+import frontPic from "../assets/profile/ProfilePic.jpg"
 import backPic from "../assets/profile/IT_Specilist.webp"
 
 export default function Introduction() {

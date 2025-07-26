@@ -1,13 +1,13 @@
 // HomeLabPage.tsx
 import { motion } from "framer-motion";
-import HardwareCard from "../components/cards/HardwareCard";
+import HardwareCard from "../components/hardwareCard/HardwareCard";
 import ServiceBadge from "../components/ServiceBadge";
 import raspberry from '../assets/raspberry-pi.webp'
 import macmini from '../assets/mac-mini.webp'
 import { Button } from "@/components/ui/button";
 import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { BlogPost } from "@/components/BlogPost";
+import { BlogPost } from "@/components/blogCard/BlogPost";
 
 const buildJourney = [
   {

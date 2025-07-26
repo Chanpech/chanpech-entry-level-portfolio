@@ -3,7 +3,6 @@ import WorkExperience from '../components/WorkExperience';
 import Projects from '../components/Projects';
 import Courses from '../components/Courses';
 import Footer from '../components/Footer';
-import Contact from '../components/Contact';
 import Certification from "../components/Certification";
 import CurrentProjects from '../components/CurrentProjects';
 import WelcomeIntroContainer from '../components/WelcomeIntroContainer';
@@ -24,7 +23,6 @@ const HomePage = () => {
             <Certification />
             <CurrentProjects />
             <References />
-            <Contact />
             <BuyMeCoffee />
           </main>
           <Footer />

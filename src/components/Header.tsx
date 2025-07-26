@@ -25,7 +25,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-gradient-to-br from-yellow-400 dark:bg-none dark:bg-gray-800 shadow-md">
+    <header className="bg-gradient-to-br from-gray-300 to-white-200 dark:bg-none dark:bg-gray-800 shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
         <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:block mt-4 md:mt-0`}>
