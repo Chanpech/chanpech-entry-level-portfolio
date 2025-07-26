@@ -2,7 +2,7 @@ import React from "react";
 
 const BuyMeCoffee: React.FC = () =>{
     return (
-        <div className="p-4 rounded-xl shadow-md bg-yellow-500 text-center">
+        <div className="p-4 rounded-xl shadow-md bg-gray-200 text-center">
             <h2 className="text-lg font-bold mb-2">Support My Work ☕</h2>
             <p className="mb-4 text-sm text-gray-600">Love what I do? Consider buying me a coffee!</p>
             <a

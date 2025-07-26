@@ -1,7 +1,7 @@
-import { BlogPost } from "@/components/BlogPost";
+import { BlogPost } from "@/components/blogCard/BlogPost";
 import { motion } from "framer-motion";
 import ServiceBadge from "@/components/ServiceBadge";
-import HardwareCardV3 from "@/components/cards/HardwareCardV3";
+import HardwareCardV3 from "@/components/hardwareCard/HardwareCardV3";
 import jbbakery from '../assets/JBBakery.png';
 
 const buildJourney = [

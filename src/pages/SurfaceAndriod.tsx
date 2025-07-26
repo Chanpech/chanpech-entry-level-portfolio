@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { BlogPost } from "@/components/BlogPost";
+import { BlogPost } from "@/components/blogCard/BlogPost";
 import { motion } from "framer-motion";
 import ServiceBadge from "@/components/ServiceBadge";
-import HardwareCardV2 from "@/components/cards/HardwareCardV2";
+import HardwareCardV2 from "@/components/hardwareCard/HardwareCardV2";
 import surfacepro from '../assets/surface-pro.webp';
 import { Button } from "@/components/ui/button";
 import { BiArrowBack } from "react-icons/bi";

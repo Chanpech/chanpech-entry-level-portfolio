@@ -6,7 +6,8 @@ import LoadingSpinner from "./components/LoadingSpinner.tsx";
 // Lazy load pages with explicit naming for better debugging
 const HomeLabPage = lazy(() => import("./pages/HomeLab.tsx"));
 const SurfaceAndroidPage = lazy(() => import("./pages/SurfaceAndriod.tsx"));
-const JaydenBrianWeb = lazy(() => import("./pages/JaydenBrianWeb.tsx"))
+const JaydenBrianWeb = lazy(() => import("./pages/JaydenBrianWeb.tsx"));
+const N8nPage = lazy(() => import("./pages/N8nPage.tsx"));
 
 function App() {
   return (
@@ -34,6 +35,14 @@ function App() {
           element={
             <Suspense fallback={<LoadingSpinner />}>
               <JaydenBrianWeb />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/n8nautomation"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <N8nPage />
             </Suspense>
           }
         />
