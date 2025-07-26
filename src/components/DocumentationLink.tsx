@@ -9,7 +9,7 @@ interface DocumentationLinkProps{
     url: string,
 }
 
-const DocumentationLink = ( { index, icon, title, description, url } :DocumentationLinkProps) => {
+const DocumentationLink = ( { icon, title, description, url } :DocumentationLinkProps) => {
 
     return (
         <motion.a

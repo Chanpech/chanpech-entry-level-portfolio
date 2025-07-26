@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import { BiArrowBack } from "react-icons/bi";
 import ServiceBadge from "../components/ServiceBadge";
 import DocumentationLink from "../components/DocumentationLink";
-import { ArrowLeft, Zap, Database } from "lucide-react";
+import { Zap } from "lucide-react";
 import HardwareCard from "@/components/hardwareCard/HardwareCardV4";
 import BlogPost  from "@/components/blogCard/BlogPostV2";
 
