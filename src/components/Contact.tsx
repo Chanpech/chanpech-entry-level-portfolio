@@ -50,7 +50,7 @@ export default function Contact() {
           variant: "destructive",
         });
       }
-    } catch (err) {
+    } catch (err:any) {
       console.error("Email send error:", err);
        const message = err?.response?.data?.error || err.message || "Unknown error";
       toast({
