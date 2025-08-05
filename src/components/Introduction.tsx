@@ -5,6 +5,16 @@ import frontPic from "../assets/profile/ProfilePic.jpg"
 import backPic from "../assets/profile/IT_Specilist.webp"
 
 export default function Introduction() {
+  const email = 'nulvisak33@gmail.com';
+  const subject = encodeURIComponent('Contact from DamianNul Porfolio');
+  const body = encodeURIComponent('Your Inquiry...');
+
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+ 
+  const handleClick = () => {
+    window.open(gmailLink, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="about" className="container mx-auto px-4 py-8 mb-14">
       <div className="flex flex-col md:flex-row items-center gap-8">
@@ -47,7 +57,7 @@ If I’ve piqued your interest, feel free to reach out—I'd love to chat! 💬
               <span>LinkedIn</span>
             </a>
             <a
-              href="#contact"
+              onClick={handleClick}
               className="bg-gray-600 text-white px-5 py-2 rounded hover:bg-gray-500 flex items-center space-x-2"
             >
               <FaMailBulk />
