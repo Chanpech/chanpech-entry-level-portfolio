@@ -4,10 +4,9 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const messages = [
-    "Hello, I'm Peck",
-    "I'm a full-stack developer!",
-    "Actively seeking to understand and master new frameworks!",
-    "I create pixel art & code!",
+    "Hello, I'm Damian",
+    "I'm a developer and a system administrator!",
+    "Love creating and learning new technologies!",
 ]
 
 const skills = [
