@@ -29,7 +29,7 @@ export default function Introduction() {
         </div>
         <div className="flex-1">
           <h2 className="text-3xl font-bold ">Damian Nul</h2>
-          <h2 className="text-2xl text-muted-foreground mb-4">Formerly known: Chanpech Hoeng</h2>
+          <h2 className="text-2xl text-muted-foreground mb-4">Formerly known: Chanpech H.</h2>
           <h3 className="text-xl text-muted-foreground">B.S. Computer Science Graduate | Cybersecurity Enthusiast</h3>
           <h4 className="text-l text-muted-foreground mb-4">Departmental GPA: 3.55 | Cumulative GPA: 3.71</h4>
           <p className="text-lg mb-6">
