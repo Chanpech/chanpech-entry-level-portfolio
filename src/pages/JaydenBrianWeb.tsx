@@ -154,7 +154,7 @@ const SurfaceAndroid = () => {
                     <div className="relative">
                         <HardwareCardV3
                             title={`New domain just launched!`}
-                            role="www.jaydenbrianbakery.social"
+                            role="https://jaydenbrianbakery.social/"
                             specs={[
                                 "Acquired through name.com",
                                 "Managed and configured in Vercel's Domains",
