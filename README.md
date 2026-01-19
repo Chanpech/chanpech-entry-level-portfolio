@@ -1,19 +1,17 @@
-# 💼 My Professional Developer Portfolio 👨🏻‍💻
+# My Professional Developer Portfolio 
 
 Welcome to my portfolio website! This project showcases my skills, experience, blogs, and projects as a full stack (or front-end/back-end) developer. It's designed to be a responsive, modern, and fast web experience.
 
-## 🌐 Live Demo
+[Visit My Portfolio](https://damiannul.me)
 
-👉 [Visit My Portfolio](https://damiannul.me)
-
-## 🛠 Tech Stack 🥞
+## 🛠 Tech Stack 
 - **Frontend:** React.js / Vite.js / Tailwind CSS / TypeScript
 - **Backend:**  Node.js
 - **Hosting:** Vercel / Namecheap (Domain) / GitHub Repo
 - **Tools:** Figma / Git / ESLint / Prettier /
 - **Libraries:** ShadCN / React-Icons / BuyMeCoffee / Framer-Motion / Emailjs-com
 
-## ✨ Features
+## Features
 
 - Fully responsive design
 - Smooth animations and transitions from Framer-Motion
@@ -22,7 +20,7 @@ Welcome to my portfolio website! This project showcases my skills, experience, b
 - Vercel's Analytics
 - Professional Domain
 
-## 📸 Screenshots
+## Screenshots
 
 | Desktop | Mobile |
 |--------|--------|
