@@ -50,9 +50,18 @@ export default function Contact() {
           variant: "destructive",
         });
       }
-    } catch (err:any) {
+    } catch (err: unknown) {
       console.error("Email send error:", err);
-       const message = err?.response?.data?.error || err.message || "Unknown error";
+
+      let message = "Unknown error";
+
+      if (axios.isAxiosError(err)) {
+        const serverError = err.response?.data as { error?: string } | undefined;
+        message = serverError?.error ?? err.message ?? "Unknown error";
+      } else if (err instanceof Error) {
+        message = err.message;
+      }
+
       toast({
         title: "Error",
         description: message,
