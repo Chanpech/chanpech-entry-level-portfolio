@@ -55,6 +55,8 @@
     "vite-plugin-html": "^3.2.2"
   },
   "overrides": {
-    "path-to-regexp": "^6.2.3"
+    "path-to-regexp": "^6.2.3",
+    "minimatch": "^10.2.3",
+    "undici": "^6.23.0"
   }
 }
