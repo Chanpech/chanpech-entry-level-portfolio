@@ -25,7 +25,7 @@ const experiences: Experience[] = [
     title: "System Operator",
     company: "Walmart Inc.",
     location: "Matteson, IL",
-    date: "Sept 2021 - Sep 2022",
+    date: "June 2025 - Present",
     description: [
       "Monitor and maintain enterprise-scale system hardware and software infrastructure across high-availability retail and logistics operations, ensuring consistent uptime and reliability.",
       "Respond to and troubleshoot critical incidents impacting system performance, network connectivity, or user access; coordinate with cross-functional IT and engineering teams to restore services within SLA.",
